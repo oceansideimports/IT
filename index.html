@@ -16,12 +16,12 @@
 <body>
 
   <h1>TAP THE BUTTON</h1>
-  <p>to install Printers & VPN<br>for OCEANSIDE IMPORTS</p>
+  <p>to download Printers <br>for OCEANSIDE IMPORTS</p>
 
-  <button id="downloadBtn">INSTALL NOW</button>
+  <button id="downloadBtn">DOWNLOAD NOW</button>
 
   <div class="footer">
-    Works on iPhone • iPad • Mac<br>Takes 10 seconds
+    Works on iPhone • iPad • Mac<br>
   </div>
 
   <script>
@@ -37,7 +37,7 @@
         a.download = 'VPN_AirPrint.mobileconfig';
         a.click();
         URL.revokeObjectURL(a.href);
-        alert('Accept download on next prompt. Install → Done');
+        alert('Accept configuration profile download on next prompt. Install → Done. Connect to VPN when offsite to access Printers.');
       } catch (e) {
         alert('Error – reply "HELP" and we’ll SharePlay you');
       }
