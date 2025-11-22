@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OCEANSIDE IMPORTS Printer Setup</title>
+  <style>
+    body, html {margin:0;padding:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(135deg,#0a84ff,#0077ed);color:white;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+    h1 {font-size:clamp(2rem,8vw,3.2rem);font-weight:800;margin:0 30px 8px;}
+    p {font-size:clamp(1.1rem,4.5vw,1.6rem);margin:8px 40px;line-height:1.5;opacity:0.95;}
+    button {margin:4vh 0 2vh;background:white;color:#0a84ff;font-size:clamp(1.3rem,5vw,2rem);font-weight:700;padding:16px 48px;border-radius:20px;border:none;box-shadow:0 8px 25px rgba(0,0,0,0.25);cursor:pointer;transition:transform .15s;}
+    button:active {transform:scale(0.96);}
+    .footer {margin-top:auto;padding:30px;font-size:0.95rem;opacity:0.85;}
+  </style>
+</head>
+<body>
+  <br>
+  <h1>OCEANSIDE IMPORTS <br>Internal IT</h1>
+  <p>Tap the "Download Now" button below <br>to configure device for access to printers when offsite.</p>
+
+  <button id="downloadBtn">DOWNLOAD NOW</button>
+
+  <div class="footer">
+    Works on iPhone • iPad • Mac<br>
+  </div>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const url = 'https://raw.githubusercontent.com/oceansideimports/IT/main/VPN_AirPrint.mobileconfig';
+      try {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error('Download failed');
+        const text = await r.text();
+        const blob = new Blob([text], { type: 'application/x-apple-aspen-config' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'VPN_AirPrint.mobileconfig';
+        a.click();
+        URL.revokeObjectURL(a.href);
+        alert('Accept configuration profile download on next prompt. Install → Done. Connect to VPN when offsite to access Printers.');
+      } catch (e) {
+        alert('Error – reply "HELP" and we’ll SharePlay you');
+      }
+    });
+  </script>
+
+</body>
+</html>
