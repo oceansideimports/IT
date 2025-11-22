@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN & Printer Setup</title>
+</head>
+<body style="margin:0; padding:40px; font-family: -apple-system; background:#0a84ff; text-align:center">
+  <h1 style="color:white; font-size:50px">TAP THE BIG BLUE BUTTON</h1>
+  <p style="color:white; font-size:40px">to install VPN & Printers</p>
+  
+  <button id="downloadBtn" style="background:white; color:#0a84ff; font-size:80px; font-weight:bold; 
+                                 padding:60px 120px; border-radius:30px; text-decoration:none; 
+                                 display:inline-block; margin:50px; border:none; cursor:pointer;">
+    INSTALL NOW
+  </button>
+  
+  <p style="color:white; font-size:30px">Works on iPad • Takes 10 seconds</p>
+  
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const rawUrl = 'https://raw.githubusercontent.com/oceansideimports/IT/main/VPN_AirPrint.mobileconfig';
+      
+      try {
+        const resp = await fetch(rawUrl);
+        if (!resp.ok) throw new Error('Failed to download');
+        const text = await resp.text();
+        const blob = new Blob([text], { type: 'application/x-apple-aspen-config' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'VPN_AirPrint.mobileconfig';
+        a.click();
+        URL.revokeObjectURL(url);
+        alert('Download started! Tap the yellow banner → Install → Done');
+      } catch (e) {
+        alert('Error – reply "HELP" and we’ll SharePlay you');
+      }
+    });
+  </script>
+</body>
+</html>
