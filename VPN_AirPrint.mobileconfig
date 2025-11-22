@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AirPrint</key>
+			<array>
+				<dict>
+					<key>ForceTLS</key>
+					<false/>
+					<key>IPAddress</key>
+					<string>172.16.70.169</string>
+					<key>PPDOptions</key>
+					<dict>
+						<key>ColorModel</key>
+						<string>Black</string>
+						<key>Duplex</key>
+						<string>None</string>
+						<key>MediaType</key>
+						<string>Plain</string>
+						<key>PrintQuality</key>
+						<string>Draft</string>
+						<key>copies</key>
+						<string>2</string>
+					</dict>
+					<key>Port</key>
+					<integer>631</integer>
+					<key>ResourcePath</key>
+					<string>/ipp/print</string>
+				</dict>
+				<dict>
+					<key>ForceTLS</key>
+					<false/>
+					<key>IPAddress</key>
+					<string>172.16.107.102</string>
+					<key>PPDOptions</key>
+					<dict>
+						<key>ColorModel</key>
+						<string>Black</string>
+						<key>Duplex</key>
+						<string>None</string>
+						<key>MediaType</key>
+						<string>Plain</string>
+						<key>PrintQuality</key>
+						<string>Draft</string>
+						<key>copies</key>
+						<string>2</string>
+					</dict>
+					<key>Port</key>
+					<integer>631</integer>
+					<key>ResourcePath</key>
+					<string>/ipp/print</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configure AirPrint printers with presets for VPN users</string>
+			<key>PayloadDisplayName</key>
+			<string>OCEANSIDE IMPORTS AirPrint</string>
+			<key>PayloadIdentifier</key>
+			<string>com.oceansideimports.airprint</string>
+			<key>PayloadOrganization</key>
+			<string>OCEANSIDE IMPORTS</string>
+			<key>PayloadType</key>
+			<string>com.apple.airprint</string>
+			<key>PayloadUUID</key>
+			<string>a4b54ad3-f32a-49d0-bb77-c9c86da62fdb</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>AirPrint printers with presets for OCEANSIDE IMPORTS Users and Devices</string>
+	<key>PayloadDisplayName</key>
+	<string>AirPrint VPN Config</string>
+	<key>PayloadIdentifier</key>
+	<string>com.oceansideimports.airprint.config</string>
+	<key>PayloadOrganization</key>
+	<string>OCEANSIDE IMPORTS</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>09aadc87-71f0-463b-b3a5-fc6f336a93e3</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
