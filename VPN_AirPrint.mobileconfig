@@ -11,7 +11,7 @@
 					<key>ForceTLS</key>
 					<false/>
 					<key>IPAddress</key>
-					<string>172.16.70.169</string>
+					<string>207.112.58.74</string>
 					<key>PPDOptions</key>
 					<dict>
 						<key>ColorModel</key>
@@ -26,7 +26,7 @@
 						<string>2</string>
 					</dict>
 					<key>Port</key>
-					<integer>631</integer>
+					<integer>30631</integer>
 					<key>ResourcePath</key>
 					<string>/ipp/print</string>
 				</dict>
