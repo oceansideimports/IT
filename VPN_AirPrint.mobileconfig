@@ -11,7 +11,7 @@
 					<key>ForceTLS</key>
 					<false/>
 					<key>IPAddress</key>
-					<string>207.112.58.74</string>
+					<string>172.16.70.169</string>
 					<key>PPDOptions</key>
 					<dict>
 						<key>ColorModel</key>
@@ -26,13 +26,36 @@
 						<string>2</string>
 					</dict>
 					<key>Port</key>
-					<integer>30631</integer>
+					<integer>631</integer>
+					<key>ResourcePath</key>
+					<string>/ipp/print</string>
+				</dict>
+				<dict>
+					<key>ForceTLS</key>
+					<false/>
+					<key>IPAddress</key>
+					<string>172.16.70.34</string>
+					<key>PPDOptions</key>
+					<dict>
+						<key>ColorModel</key>
+						<string>Black</string>
+						<key>Duplex</key>
+						<string>None</string>
+						<key>MediaType</key>
+						<string>Plain</string>
+						<key>PrintQuality</key>
+						<string>Draft</string>
+						<key>copies</key>
+						<string>2</string>
+					</dict>
+					<key>Port</key>
+					<integer>631</integer>
 					<key>ResourcePath</key>
 					<string>/ipp/print</string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
-			<string>Configure AirPrint printer for external access via direct port forwarding</string>
+			<string>Configure AirPrint printers with presets for VPN users</string>
 			<key>PayloadDisplayName</key>
 			<string>OCEANSIDE IMPORTS AirPrint</string>
 			<key>PayloadIdentifier</key>
@@ -48,9 +71,9 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>AirPrint printer with presets for OCEANSIDE IMPORTS users</string>
+	<string>AirPrint printers with presets for OCEANSIDE IMPORTS Users and Devices</string>
 	<key>PayloadDisplayName</key>
-	<string>AirPrint External Config</string>
+	<string>AirPrint VPN Config</string>
 	<key>PayloadIdentifier</key>
 	<string>com.oceansideimports.airprint.config</string>
 	<key>PayloadOrganization</key>
