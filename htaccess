@@ -1,0 +1,2 @@
+AddType application/x-apple-aspen-config .mobileconfig
+AddType application/octet-stream .mobileconfig
