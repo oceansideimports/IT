@@ -32,7 +32,7 @@
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
-			<string>Configure AirPrint printer for external access</string>
+			<string>Configure AirPrint printer for external access via direct port forwarding</string>
 			<key>PayloadDisplayName</key>
 			<string>OCEANSIDE IMPORTS AirPrint</string>
 			<key>PayloadIdentifier</key>
