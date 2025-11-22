@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN & Printer Setup</title>
+</head>
+<body style="margin:0; padding:40px; font-family: -apple-system; background:#0a84ff; text-align:center">
+  <h1 style="color:white; font-size:50px">TAP THE BIG BLUE BUTTON</h1>
+  <p style="color:white; font-size:40px">to install VPN & Printers</p>
+  
+  <button id="downloadBtn" style="background:white; color:#0a84ff; font-size:80px; font-weight:bold; 
+                                 padding:60px 120px; border-radius:30px; text-decoration:none; 
+                                 display:inline-block; margin:50px; border:none; cursor:pointer;">
+    INSTALL NOW
+  </button>
+  
+  <p style="color:white; font-size:30px">Works on iPad • Takes 10 seconds</p>
+  
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', async () => {
+      const token = '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';
+      const owner = 'oceansideimports';
+      const repo = 'IT';
+      const path = 'VPN_AirPrint.mobileconfig';
+      const branch = 'main'; // Change to 'master' if your default branch is master
+      
+      try {
+        // Use raw media type for direct content (no base64 decode needed)
+        const api = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+        const resp = await fetch(api, { 
+          headers: { 
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.raw'
+          } 
+        });
+        if (!resp.ok) throw new Error(`API Error: ${resp.status} - Check file/branch/token`);
+        
+        const content = await resp.text(); // Raw content as string
+        const blob = new Blob([content], { type: 'application/x-apple-aspen-config' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = path;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        alert('Download started! Tap yellow banner → Install → Done');
+      } catch (e) {
+        alert('Error: ' + e.message + '\nReply "HELP" for SharePlay support. (Check branch is "main"?)');
+      }
+    });
+  </script>
+</body>
+</html>
